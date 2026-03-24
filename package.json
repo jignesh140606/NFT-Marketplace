@@ -1,0 +1,30 @@
+{
+  "name": "my-dapp",
+  "version": "0.1.0",
+  "description": "A Web3 application - composed with [N]skills",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy:erc721": "ts-node scripts/deploy-erc721.ts",
+    "nft:info": "ts-node scripts/nft-info.ts",
+    "fix-scripts": "command -v dos2unix >/dev/null && dos2unix scripts/*.sh 2>/dev/null || echo \"Run: dos2unix scripts/*.sh (install: apt install dos2unix / brew install dos2unix)\"",
+    "security:install": "bash scripts/install-radar.sh",
+    "security:analyze": "bash scripts/run-radar.sh",
+    "deploy:sepolia": "bash scripts/deploy-sepolia.sh",
+    "deploy:mainnet": "bash scripts/deploy-mainnet.sh",
+    "wallet:setup": "echo \"Get your WalletConnect Project ID from https://dashboard.reown.com\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "license": "MIT",
+  "keywords": [
+    "web3",
+    "dapp"
+  ]
+}
